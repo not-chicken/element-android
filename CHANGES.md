@@ -8,7 +8,7 @@ Improvements 🙌:
  -
 
 Bugfix 🐛:
- -
+ - Disable URL preview for some domains (#2995)
 
 Translations 🗣:
  -
