@@ -39,6 +39,11 @@ class VectorConfiguration @Inject constructor(private val context: Context) {
             Timber.v("## onConfigurationChanged(): restore the expected value ${VectorLocale.applicationLocale}")
             Locale.setDefault(VectorLocale.applicationLocale)
         }
+        // FIX ME! - Hack for text color not changing in "System" theme.
+        // See Github Issues: #2738 and #2792
+        if (ThemeUtils.isSystemTheme(context)) {
+            ThemeUtils.init(context)
+        }
     }
 
     fun applyToApplicationContext() {
